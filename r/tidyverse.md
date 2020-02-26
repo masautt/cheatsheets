@@ -1,15 +1,24 @@
-# tidyverse-cheatsheet
+# r-cheatsheet
+## tidyverse-cheatsheet
+
+|dataset|col1|col2|col3|col4|col5|
+|-|-|-|-|-|-|
+|row1|||||||
+|row2|||||||
+|row3|||||||
+|row4|||||||
+|row5|||||||
 ## Commands
 | Command |Desc |
 |  -| - |
-| `dataset %>% select(var1, var2, var3)`|Use tidyverse to select a portion of a table by variables|
-| `dataset %>% select(var1, var2, var3) %>% filter(var1 = "value1")` | Use tidyverse to select a portion of a table but filter by a condition|
-| `dataset %>% select(var1, var2, var3) %>% filter(var1 = "value1") %>% na.omit()` | Removing N/A's|
-| `dataset %>% select(var1, var2, var3) %>% filter(var1 == "value1") %>% na.omit() %>% mutate(var2 = var2/100)` |Change something about your data|
-| `dataset %>% select(var1, var2, var3) %>% filter(var1 == "value1") %>% na.omit() %>% mutate(newVar = var2/var1)` |Add something to your data|
-| `dataset %>% select(var1, var2, var3) %>% filter(var1 == "value1") %>% na.omit() %>% mutate(newVar = var2/var1) %>% group_by(var3) %>% summarise(var4 = mean(var3))` | Display the new data|
-| `dataset %>% arrange(var)` | Sort by order (ascending) |
-| `dataset %>% arrange(desc(var))` | Sort by order (descending)|
+| `dataset %>% select(col1, col2, col3)`|Use tidyverse to select a portion of a table by column|
+| `dataset %>% select(col1, col2, col3) %>% filter(col1 = "val1")` | Use tidyverse to select a portion of a table but filter by a condition|
+| `dataset %>% select(col1, col2, col3) %>% filter(col1 = "val1") %>% na.omit()` | Removing N/A's|
+| `dataset %>% select(col1, col2, col3) %>% filter(col1 == "val1") %>% na.omit() %>% mutate(col2 = col2/100)` |Change something about your data|
+| `dataset %>% select(col1, col2, col3) %>% filter(col1 == "val1") %>% na.omit() %>% mutate(newcol = col2/col1)` |Add something to your data|
+| `dataset %>% select(col1, col2, col3) %>% filter(col1 == "val1") %>% na.omit() %>% mutate(newcol = col2/col1) %>% group_by(col3) %>% summarise(col4 = mean(col3))` | Display the new data|
+| `dataset %>% arrange(col`)` | Sort by order (ascending) |
+| `dataset %>% arrange(desc(col`))` | Sort by order (descending)|
 | `dataset %>% slice(1:10)` | Get top 10|
 
 
